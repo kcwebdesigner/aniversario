@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Feliz Aniversário, Gustavo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  min-height:100vh;
+  background:radial-gradient(circle at top,#3a1c71,#000);
+  font-family:'Inter',sans-serif;
+  color:#fff;
+  overflow:hidden;
+}
+
+/* ESTRELAS */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:radial-gradient(#ffffff55 1px,transparent 1px);
+  background-size:40px 40px;
+  opacity:.2;
+  pointer-events:none;
+}
+
+/* NYAN CAT */
+.nyan{
+  position:fixed;
+  top:15%;
+  left:-200px;
+  width:150px;
+  animation:nyan 12s linear infinite;
+  z-index:1;
+}
+
+@keyframes nyan{
+  from{transform:translateX(0)}
+  to{transform:translateX(120vw)}
+}
+
+.container{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  padding:40px 20px;
+}
+
+/* CARD */
+.card{
+  max-width:520px;
+  width:100%;
+  background:linear-gradient(180deg,#1a0033,#0a001a);
+  border-radius:16px;
+  border:2px solid #6dfcff;
+  box-shadow:0 0 25px #6dfcff88,0 0 60px #ff4ecd55;
+  padding:32px 24px;
+  text-align:center;
+  z-index:2;
+}
+
+h1{
+  font-family:'Press Start 2P',cursive;
+  font-size:18px;
+  color:#e6c7ff;
+  text-shadow:0 0 10px #ff6ad5;
+}
+
+h1 span{
+  display:block;
+  font-size:28px;
+  margin-top:12px;
+  color:#4dfff3;
+  text-shadow:0 0 12px #4dfff3;
+}
+
+.bolo{font-size:48px;margin:18px 0}
+
+.sub{font-size:14px;color:#a7f3ff}
+
+.linha{
+  height:2px;
+  margin:24px 0;
+  background:linear-gradient(90deg,#ff4ecd,#4dfff3);
+}
+
+.texto{
+  font-size:14px;
+  color:#f3caff;
+  line-height:1.6;
+}
+
+.assinatura{
+  margin-top:26px;
+  font-size:12px;
+  opacity:.85;
+}
+
+.botoes{
+  margin-top:22px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+}
+
+.btn{
+  padding:10px 18px;
+  font-size:12px;
+  font-weight:700;
+  border:none;
+  border-radius:6px;
+}
+
+.visitor{background:#ff4ecd;color:#000}
+.aura{background:#4dfff3;color:#000}
+
+/* DESKTOP FLOAT */
+.float{
+  position:absolute;
+  width:120px;
+  border-radius:10px;
+  border:2px solid #ff6ad5;
+  box-shadow:0 0 15px #ff6ad5aa;
+  animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-14px)}
+}
+
+.float img{width:100%;border-radius:8px}
+
+/* MOBILE IMAGENS */
+.mobile-img{
+  position:absolute;
+  width:90px;
+  border-radius:10px;
+  border:2px solid #ff6ad5;
+  animation:glow 3s ease-in-out infinite, tilt 6s ease-in-out infinite;
+  z-index:1;
+}
+
+@keyframes glow{
+  0%,100%{box-shadow:0 0 10px #ff6ad5aa}
+  50%{box-shadow:0 0 22px #ff6ad5}
+}
+
+@keyframes tilt{
+  0%,100%{transform:rotate(-2deg)}
+  50%{transform:rotate(2deg)}
+}
+
+.m1{top:20px;left:10px}
+.m2{top:20px;right:10px}
+.m3{bottom:20px;left:10px}
+.m4{bottom:20px;right:10px}
+
+@media(max-width:768px){
+  .float{display:none}
+  .nyan{top:6%}
+}
+</style>
+</head>
+
+<body>
+
+<img class="nyan" src="https://i.imgur.com/bbw5GHd.gif">
+
+<div class="container">
+
+  <!-- MOBILE -->
+  <img class="mobile-img m1 rand">
+  <img class="mobile-img m2 rand">
+  <img class="mobile-img m3 rand">
+  <img class="mobile-img m4 rand">
+
+  <!-- DESKTOP -->
+  <div class="float" style="top:40px;left:4%"><img src="https://i.imgur.com/RC9FWhk.jpeg"></div>
+  <div class="float" style="top:180px;left:10%"><img src="https://i.imgur.com/fjZ9UL9.jpeg"></div>
+  <div class="float" style="bottom:80px;right:6%"><img src="https://i.imgur.com/MWu1nvs.jpeg"></div>
+
+  <div class="card">
+    <h1>Feliz Aniversário,<span>GUSTAVO</span></h1>
+    <div class="bolo">🎂</div>
+    <div class="sub">Aproveite suas próximas 24 horas 💀💖 AURA</div>
+    <div class="linha"></div>
+    <p class="texto">
+      Um cantinho da internet criado só pra você<br>
+      com muito carinho (a la ele) 💖
+    </p>
+    <div class="assinatura">
+      ★★★★★<br>Feito pelo Kauã o Mais Massa
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+const imgs=[
+"https://i.imgur.com/RC9FWhk.jpeg",
+"https://i.imgur.com/fjZ9UL9.jpeg",
+"https://i.imgur.com/MWu1nvs.jpeg",
+"https://i.imgur.com/lM5hq5j.jpeg",
+"https://i.imgur.com/P8aBLOU.jpeg"
+];
+
+document.querySelectorAll('.rand').forEach(img=>{
+  img.src = imgs.splice(Math.random()*imgs.length|0,1)[0];
+});
+</script>
+
+</body>
+</html>
